@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   string namapelanggan;
+   int beratpakaian;
+   double tarif = 7000;
+   double totalharga;
+   double diskon;
+   
+   cout << "Nama : ";
+   getline(cin, namapelanggan);
+   
+   cout << "Berat pakaian (kg): ";
+   cin >> beratpakaian;
+   
+   cout << "1 Kg pakaian anda dikenakan 7.000 rupiah" << endl;
+   
+   totalharga = tarif * beratpakaian;
+   
+   diskon = (beratpakaian > 5) ? 0.1 * totalharga : 0;
+   
+   cout << "diskon : " << diskon << endl;
+   
+   cout << "Halo, " << namapelanggan << "Total harga yang harus di bayar menjadi" << totalharga - diskon ;
+   
+   //test
+    return 0;
+}
